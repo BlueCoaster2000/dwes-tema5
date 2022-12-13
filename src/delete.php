@@ -89,7 +89,7 @@ if (!$ejecucion){
 }
 $resultado = $sentencia->get_result();
 if (!$resultado){
-    echo "Error al obtener el resultado : ".$mysqli->error;
+    
     $sentencia->close();
     $mysqli->close();
     return [];
@@ -125,7 +125,6 @@ if ( empty( $_GET ) ||!isset( $_GET['id'] ) ){
         borrarImg($idValidado);
         unlink($rutaImg);
     }
-    var_dump($imgExist[0]['ruta']);
 
     
 }
